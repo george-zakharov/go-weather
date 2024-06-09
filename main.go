@@ -20,8 +20,7 @@ func main() {
 
 	c.OnScraped(func(r *colly.Response) {
 		logger.Println("Finished scraping data")
-		body := r.Body
-		fmt.Println(string(body))
+		fmt.Println(string(r.Body))
 	})
 
 	err := c.Visit(url)
